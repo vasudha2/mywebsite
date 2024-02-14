@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTypewriter,Cursor } from 'react-simple-typewriter';
-import {FaLinkedinIn,FaReact,FaEnvelope,FaInstagram,FaBrain} from "react-icons/fa";
+import {FaLinkedinIn,FaReact,FaEnvelope,FaGithub,FaBrain} from "react-icons/fa";
 import { SiTailwindcss } from 'react-icons/si';
 
 
@@ -13,6 +13,9 @@ const LeftBanner = () => {
         delaySpeed: 2000,
     })
     const openLinkedIn = () => {
+      window.open('https://www.linkedin.com/in/vasudha-yenda-978727192', '_blank');
+    };
+    const openGithub = () => {
       window.open('https://github.com/vasudha2', '_blank');
     };
   
@@ -20,9 +23,7 @@ const LeftBanner = () => {
       window.location.href = 'mailto:yendavasudha@gmail.com';
     };
   
-    const showFeedbackAlert = () => {
-      window.alert('You can give feedback below');
-    };
+
   return (
     <div className='w-1/2 flex flex-col gap-20'>
     <div className='flex  flex-col gap-5'>
@@ -52,8 +53,8 @@ const LeftBanner = () => {
           <span className='bannerIcon' onClick={openGmail}>
             <FaEnvelope/>
           </span>
-          <span className='bannerIcon'  onClick={showFeedbackAlert}>
-            <FaInstagram/>
+          <span className='bannerIcon'  onClick={openGithub}>
+            <FaGithub/>
           </span>
           </div>
         </div>
